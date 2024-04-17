@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Click Tracker</title>
+    <script>
+        // Function to track link clicks
+        function trackLinkClick() {
+            // Check if localStorage is supported
+            if (typeof(Storage) !== "undefined") {
+                // Retrieve or initialize click count from localStorage
+                var clickCount = localStorage.getItem("linkClickCount") || 0;
+                
+                // Increment click count
+                clickCount++;
+                
+                // Update click count in localStorage
+                localStorage.setItem("linkClickCount", clickCount);
+                
+                // Display click count
+                alert("Thank you for clicking! You are visitor #" + clickCount);
+            } else {
+                // If localStorage is not supported, display an error message
+                alert("Your browser does not support localStorage. Click tracking is not available.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Link Click Tracker</h1>
+    </header>
+
+    <div class="container">
+        <h2>Click the Link Below</h2>
+        <p>Click the link below to track how many times it has been clicked:</p>
+        <a href="https://zimall.ck.page/232ea64fd4" onclick="trackLinkClick()">Link</a>
+    </div>
+
+</body>
+</html>

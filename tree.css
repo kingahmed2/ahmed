@@ -1,0 +1,61 @@
+/* CSS styles for the copywriting ebook webpage */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #1a1a1a, #000000); /* Dark gradient background */
+    color: #ffffff; /* White font color */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4b0082; /* Purple header background */
+    color: #ffffff; /* White font color */
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black container background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Light shadow */
+}
+
+h1, h2, h3 {
+    color: #4b0082; /* Purple headings */
+}
+
+p {
+    line-height: 1.6;
+}
+
+.moving-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #00bfff; /* Neon blue text color */
+    animation: moveText 3s linear infinite alternate; /* Text animation */
+}
+
+@keyframes moveText {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -60%);
+    }
+}
+
+a {
+    color: #ffffff; /* White link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline link on hover */
+}
